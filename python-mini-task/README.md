@@ -1,5 +1,16 @@
 Live blog post:  https://eigenayoub.github.io/blogs/python-mini-task
 
+
+*State of the project so far:*
+
+* Preprocessing is done.
+* A simple CLI is done. 
+* Image below, sums up what we can do so far:
+
+![progress](/media/progressV0.png)
+
+## Progress:
+
 [Done]:
 
 * Read in the provided input.csv file, it includes time series for different sensors of a wind turbine.
@@ -13,8 +24,13 @@ Live blog post:  https://eigenayoub.github.io/blogs/python-mini-task
 [In Progress]:
 
 * Create functions that can be launched from other modules. 
-* Create a main-function to start your program,
+    * [DONE]  Basic utils file, with simple functions.
+    * [TODO]  Write more useful functions (better plotting? some modeling?)
 
+* Create a main-function to start your program,
+    * [DONE]  Basic main file, with simple calls to utils files.
+    * [DONE]  Basic CLI (command line interface) around.
+    * [TODO]  Better documentation /  better interface.
 *General guidelines:*
 
 * Provide your code with documentation within the code,
