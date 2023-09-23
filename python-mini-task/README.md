@@ -40,3 +40,8 @@ Live blog post:  https://eigenayoub.github.io/blogs/python-mini-task
 * Use python, preferrably with standard libraries for your task, in addition to that, you can use every open-source software that you like, e.g. IDEs,
 * Use PEP8 as coding-style,
 * You may use object-oriented programming for your task, if you like.
+
+### References:
+* Tutorial on argparse: [https://realpython.com/command-line-interfaces-python-argparse/](https://realpython.com/command-line-interfaces-python-argparse/).
+* ChapGPT: [https://chat.openai.com/](https://chat.openai.com/).
+* Few Kaggle notebooks on Time series, for inspiration.
