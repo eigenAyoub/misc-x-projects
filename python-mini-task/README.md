@@ -1,15 +1,15 @@
 Live blog post:  https://eigenayoub.github.io/blogs/python-mini-task
 
 
-*State of the project so far:*
+### *State of the project so far:*
 
 * Preprocessing is done.
 * A simple CLI is done. 
 * Image below, sums up what we can do so far:
 
-![progress](/media/progressV0.png)
+![progress](media/progressV0.png)
 
-## Progress:
+### Progress:
 
 [Done]:
 
@@ -31,6 +31,9 @@ Live blog post:  https://eigenayoub.github.io/blogs/python-mini-task
     * [DONE]  Basic main file, with simple calls to utils files.
     * [DONE]  Basic CLI (command line interface) around.
     * [TODO]  Better documentation /  better interface.
+
+
+
 *General guidelines:*
 
 * Provide your code with documentation within the code,
