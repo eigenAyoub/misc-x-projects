@@ -32,7 +32,9 @@ Live blog post:  https://eigenayoub.github.io/blogs/python-mini-task
     * [DONE]  Basic CLI (command line interface) around.
     * [TODO]  Better documentation /  better interface.
 
-
+[TODO]
+* Some advanced plotting options.
+* Some modelling maybe?, check if you can get any meta-data.
 
 *General guidelines:*
 
