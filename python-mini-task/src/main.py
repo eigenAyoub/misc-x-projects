@@ -5,36 +5,40 @@ import wind_data_utils
 
 def main():
 
-    # init. the parser
+    # init. the parser and subparser
     parser = argparse.ArgumentParser(description='Wind Data Analysis')
+    subparsers = parser.add_subparsers(title='Available Actions', dest='action')
+    
+    # subparsers (AKA actions)  
+    plot_parser = subparsers.add_parser('plot', help='Plot wind data')
+    subparsers.add_parser('describe', help='Plot wind data')
 
-    # CLI arguments of some actions
-    parser.add_argument('--plot', action='store_true', 
-                        help='Plot wind data')
-
-    # TODO: Add subcommands for the moving average / resampling plotting.
-
-    parser.add_argument('--describe', action='store_true', 
-                        help='Statistical desc. of the DB')
-    parser.add_argument('--columns', nargs='+', 
-                        help='Specify columns to plot')
-
+    # arguments for --plot 
+    plot_parser.add_argument('--columns', nargs='+', help='Specify column to plot')
+    plot_parser.add_argument('--rolling-avg', action='store_true')
+    plot_parser.add_argument('--resample', action='store_true')
+    
+    # get Namespace of the arguments
     args = parser.parse_args()
-    # this past call, gets the Namespace of the arguments
 
-
-
-    # to avoid loading the data with every call/action. 
     # we will load it here.
     data = wind_data_utils.load_data()
 
-    if args.plot:
+    if args.action == 'plot':
         if not args.columns:
             print("Please specify the column index to plot  --columns.")
         else:
-            #data = wind_data_utils.load_data('data2.csv')
-            wind_data_utils.plot_data(data,int(args.columns[0]))
-    if args.describe:
+            if args.resample:
+                wind_data_utils.plot_resample(data, int(args.columns[0]))
+            elif args.rolling_avg:
+                wind_data_utils.plot_rolling_avg(data, int(args.columns[0]))
+            else:
+                wind_data_utils.plot_data(data, int(args.columns[0]))
+                
+
+
+    if args.action == 'describe':
+        
         #data = wind_data_utils.load_data('data2.csv')
         print(wind_data_utils.describe(data))
 

@@ -21,20 +21,24 @@ Live blog post:  https://eigenayoub.github.io/blogs/python-mini-task
 
 * Save your reformatted data as output.csv, separated with ;
 
+* Some advanced plotting options (Rolling mean and Resampled mean)
+
 [In Progress]:
 
 * Create functions that can be launched from other modules. 
     * [DONE]  Basic utils file, with simple functions.
-    * [TODO]  Write more useful functions (better plotting? some modeling?)
+    * [DONE]  Write more useful functions (better plotting? some modeling?)
 
 * Create a main-function to start your program,
     * [DONE]  Basic main file, with simple calls to utils files.
     * [DONE]  Basic CLI (command line interface) around.
     * [TODO]  Better documentation /  better interface.
 
-[TODO]
-* Some advanced plotting options.
-* Some modelling maybe?, check if you can get any meta-data.
+[TODO]:
+* Better docu / follow guidelines.
+* Get some metadata
+* Re-write  the mini blog
+* Optimize the plotting // Make one big plotting function, and put resmaple/rolling as options inside.
 
 *General guidelines:*
 
