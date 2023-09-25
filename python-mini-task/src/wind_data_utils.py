@@ -41,7 +41,7 @@ def plot_rolling(data, column):
     rolling_mean = data.iloc[:,column].rolling(window=41).mean()
 
     plt.figure(figsize=(10, 6))
-    plt.plot(data['t_[(s)]'], col, label='Original Data', alpha=0.5)
+    plt.plot(data['t_[(s)]'], data.iloc[:,column], label='Original Data', alpha=0.5)
     plt.plot(data['t_[(s)]'], rolling_mean, label='Rolling Mean', color='orange')
 
 

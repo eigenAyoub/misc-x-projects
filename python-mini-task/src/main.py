@@ -30,7 +30,7 @@ def main():
             if args.resample:
                 wind_data_utils.plot_resample(data, int(args.columns[0]))
             elif args.rolling_avg:
-                wind_data_utils.plot_rolling_avg(data, int(args.columns[0]))
+                wind_data_utils.plot_rolling(data, int(args.columns[0]))
             else:
                 wind_data_utils.plot_data(data, int(args.columns[0]))
                 
