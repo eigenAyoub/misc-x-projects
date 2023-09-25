@@ -4,12 +4,11 @@ import argparse
 import wind_data_utils
 
 def main():
-
     # init. the parser and subparser
     parser = argparse.ArgumentParser(description='Wind Data Analysis')
     subparsers = parser.add_subparsers(title='Available Actions', dest='action')
     
-    # subparsers (AKA actions)  
+    # subparsers (i.e., actions)  
     plot_parser = subparsers.add_parser('plot', help='Plot wind data')
     subparsers.add_parser('describe', help='Plot wind data')
 

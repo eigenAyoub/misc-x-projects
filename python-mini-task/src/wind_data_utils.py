@@ -27,7 +27,6 @@ def plot_data(data, column):
 def plot_resample(data, column):
     plt.figure(figsize=(10, 6))
 
-
     col_sampled = data.iloc[:,column].resample('2S').mean()
 
     plt.plot(col_sampled, marker='o')
@@ -39,16 +38,15 @@ def plot_resample(data, column):
 
 
 def plot_rolling(data, column):
-
-    rolling_mean = data.iloc[:,column].rolling(window=50).mean()
+    rolling_mean = data.iloc[:,column].rolling(window=41).mean()
 
     plt.figure(figsize=(10, 6))
     plt.plot(data['t_[(s)]'], col, label='Original Data', alpha=0.5)
     plt.plot(data['t_[(s)]'], rolling_mean, label='Rolling Mean', color='orange')
 
 
-    plt.title('Original Data with a 1 second Rolling Mean')
-    plt.xlabel('Date')
+    plt.title('Original Data with a 2 second Rolling Mean')
+    plt.xlabel('Time')
     plt.ylabel('Value')
     plt.legend()
     plt.grid(True)
@@ -60,6 +58,4 @@ def describe(data):
     return data.describe() 
 
 
-## advanced plotting: Moving average // Resample.
-
-## some modeling?
+## some modeling? 
