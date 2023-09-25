@@ -9,6 +9,14 @@ Live blog post:  https://eigenayoub.github.io/blogs/python-mini-task
 
 ![progress](media/progressV0.png)
 
+
+* The current CLI handles `plot` and `describe` as subparsers (actions), rather than arguments, they can be used as follows:
+    * `./main.py plot --columns 3 --rolling-avg` 
+    * `./main.py plot --columns 3 --resample`
+    * `./main.py describe`
+
+* Also, make sure your `./main.py` is executable, `chmod +x main.py`
+
 ### Progress:
 
 [Done]:
